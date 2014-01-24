@@ -1,0 +1,227 @@
+	$iconWidth: 138px;
+	$remainWidth: 524px; /* 800 - ($iconWidth * 2); */
+	DL {
+	}
+	DT {
+		font-weight: bold;
+		padding-top: 7px;
+	}
+
+	BODY {
+	  background-color: #CCCCCC;
+	  font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 19px;
+      color: #000000;
+	  leftmargin: 0px;
+	  topmargin: 0px;
+	  marginwidth: 0px;
+	  marginheight: 0px;
+	}
+	LI {
+	}
+	P {
+	}
+	TD.portfolioTitle {
+		font-size: 25px;
+		line-height: 35px;
+		font-weight: bold;
+		text-align: center;
+		padding-bottom: 7px;
+	}
+	TD.portfolioSubTitle {
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: bold;
+		text-align: left;
+		padding-bottom: 7px;
+	}
+	TD.portfolioText {
+		font-size: 12px;
+		line-height: 20px;
+		text-align: left;
+		padding-bottom: 7px;
+	}
+	TR.docDescription {
+		padding: 7px 7px 7px 7px;
+	}
+	TD.docDescription {
+		padding: 7px 7px 7px 7px;
+	}
+	TR.docHeader {
+		padding: 7px 7px 7px 7px;
+		font-size: 19px;
+		line-height: 25px;
+		font-weight: bold;
+		text-align: center;
+	}
+	/*
+	A:link {
+		font-weight: bold;
+		color: navy;
+	}
+	A:visited {
+		font-weight: bold;
+		color: navy;
+	}
+	A:hover {
+		font-weight: bold;
+		color: blue;
+	}
+	A.bread:link {
+		font-size: 10px;
+		font-weight: bold;
+		color: navy;
+	}
+	A.bread:visited {
+		font-size: 10px;
+		font-weight: bold;
+		color: navy;
+	}
+	A.bread:hover {
+		font-size: 10px;
+		font-weight: bold;
+		color: blue;
+	}
+	A.doclink:link {
+		font-size: 12px;
+		color: navy;
+	}
+	A.doclink:visited {
+		font-size: 12px;
+		color: navy;
+	}
+	A.doclink:hover {
+		font-size: 12px;
+		color: blue;
+	}
+	*/
+	TD.bread {
+		font-size: 10px;
+	}
+	.docSubHead {
+		font-size: 11px;
+	}
+	.siteTitle {
+		font-weight: bold; 
+		font-size: 14px;
+	}
+	.portfolioDisplay {
+		position: relative;
+		vertical-align: top;
+		left: 0px;
+		top: 0px;
+		height: 610px;
+		width: 525px;
+	}
+	.iesPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		padding-left: 13px;
+		padding-top: 13px;
+		height: auto;
+		vertical-align: top;
+	}
+	.maytagPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		padding-left: 13px;
+		padding-top: 13px;
+		height: auto;
+	}
+	.wattsPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		padding-left: 13px;
+		padding-top: 13px;
+		height: auto;
+	}
+	.xbPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		padding-left: 13px;
+		padding-top: 13px;
+		height: auto;
+	}
+	.billwhitneyPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		padding-left: 13px;
+		padding-top: 13px;
+		height: auto;
+	}
+	.spectrumPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		height: auto;
+		padding-left: 13px;
+		padding-top: 13px;
+	}
+	.abnAmroPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		height: auto;
+		padding-left: 13px;
+		padding-top: 13px;
+	}
+	.amexPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		height: auto;
+		padding-left: 13px;
+		padding-top: 13px;
+	}
+	.usafPortfolio {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 525px;
+		height: auto;
+		padding-left: 13px;
+		padding-top: 13px;
+	}
+	TD.projIconCell {
+		width: $iconWidth;
+		padding-bottom: 7px;
+		vertical-align: top;
+		text-align: right;
+	}
+	TD.projLinkCell {
+		width: $iconWidth;
+		vertical-align: top;
+		padding: 0px 0px 17px 0px; 
+	}
+	TD.displayCell {
+		width: $remainWidth;
+		vertical-align: top;
+	}
+	.basic {
+	}
+	.quiet {
+		font-style: italic;
+		font-size: 11px;
+	}
+	.clientTitle {
+		font-size: 15px;
+		font-weight: bold;
+		margin-top: 7px;
+	}
+
+
