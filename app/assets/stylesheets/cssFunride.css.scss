@@ -182,7 +182,6 @@ h1.logoH1 {
 	height: 20px;
 	margin: 0;
 	padding: 10px 0 0 0;
-	/* background: url(image/funride/img02.gif); */
 	background: url(funride/img02_slim.gif);
 	text-align: center;
 	text-transform: uppercase;
@@ -192,7 +191,6 @@ h1.logoH1 {
 }
 
 #menu a:hover, #menu .active a {
-	/* background-image: url(funride/img03.gif); */
 	background-image: url(funride/img03_slim.gif);
 	color: $colorBrightRust;
 }
@@ -202,7 +200,7 @@ h1.logoH1 {
 #page {
 	width: $basicWidth; 
 	margin: 0 auto;
-	background: $colorMainBodyBg url(funride/img04.gif) repeat-y;
+	background: $colorMainBodyBg url(funride/img04.gif) repeat-y; 
 }
 
 /* Content */
@@ -355,3 +353,12 @@ h1.logoH1 {
 #footer a:hover {
 	text-decoration: none;
 }
+
+    img.clearbits {
+        background-image:url(clearbits/bg_rounded.gif);
+        background-color:#AA2808;
+    }
+    .aboutLine {
+        font-weight: bold;
+    }
+
