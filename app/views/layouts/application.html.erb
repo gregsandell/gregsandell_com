@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsWebsite</title>
+  <title>Greg Sandell</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+		<div id="menu">
+			<ul>
+				<li class="active"><%= link_to "Home", root_path %></li>
+				<li class=""><%= link_to "Resume", resume_path %></li>
+				<li class=""><%= link_to "Code", code_path %></li>
+				<li class=""><%= link_to "Talks", talks_path %></li>
+				<li class=""><%= link_to "Blog", blog_path %></li>
+				<li class=""><%= link_to "Contact", contact_path %></li>
+			</ul>
+		</div>
 <%= yield %>
 
 </body>
