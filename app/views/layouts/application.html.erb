@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="http://www.gregsandell.com">Greg Sandell</a></h1>
+			<h2>Javascript Web App Developer</h2>
+		</div>
 		<div id="menu">
 			<ul>
 				<li class="active"><%= link_to "Home", root_path %></li>
@@ -18,7 +24,19 @@
 				<li class=""><%= link_to "Contact", contact_path %></li>
 			</ul>
 		</div>
-<%= yield %>
+    </div>
+	<div id="page">
+		<div id="content">
+			<div id="welcome"> 
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+	<div id="footer">
+		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
+		<br/>Page Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+</div>
 
 </body>
 </html>
