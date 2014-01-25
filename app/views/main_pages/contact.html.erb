@@ -10,5 +10,11 @@
 </div>
 <% content_for(:sidebar) do %>
     This is the sidebar for the contact page.
+    <br>
+    <%= render 'links', :arg => "my links argument" %>
+    <br>
+    <%= render 'blog', :arg => "my blog argument" %>
+    <br>
+    <%= render 'slideshow', :arg => "my slideshow argument" %>
 <% end %>
 

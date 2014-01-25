@@ -1,5 +1,9 @@
 <h1>MainPages#resume</h1>
 <p>Find me in app/views/main_pages/resume.html.erb</p>
 <% content_for(:sidebar) do %>
-    This is the sidebar for the resume page.
+    This is the sidebar for the blog page.
+    <br>
+    <%= render 'links', :arg => "my links argument" %>
+    <br>
+    <%= render 'blog', :arg => "my blog argument" %>
 <% end %>
