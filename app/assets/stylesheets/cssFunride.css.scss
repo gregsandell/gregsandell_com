@@ -120,7 +120,7 @@ a:hover {
 	width: $basicWidth; 
 	height: 96px;
 	margin: 0 auto;
-	background: url(funride/img05.gif) no-repeat;
+	background: url(funride/img05.gif) no-repeat left bottom;
 }
 /* Logo */
 
@@ -199,6 +199,7 @@ h1.logoH1 {
 
 #page {
 	width: $basicWidth; 
+    height: 637px;
 	margin: 0 auto;
 	background: $colorMainBodyBg url(funride/img04.gif) repeat-y; 
 }
