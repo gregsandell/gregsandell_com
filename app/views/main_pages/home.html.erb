@@ -1,9 +1,9 @@
-<h1>MainPages#home</h1>
+<h1>MainPages#blog</h1>
 <p>Find me in app/views/main_pages/home.html.erb</p>
 <% content_for(:sidebar) do %>
     This is the sidebar for the home page.
     <br>
-    <%= render 'links', :arg => "my links argument" %>
+    <%= render 'links', :link_keys => ['blog', 'resume', 'sharc', 'publications'] %>
     <br>
     <%= render 'blog', :arg => "my blog argument" %>
     <br>

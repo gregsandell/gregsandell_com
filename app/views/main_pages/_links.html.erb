@@ -1,1 +1,12 @@
-This is the links partial with argument "<%= arg %>".
+<h2>Links</h2>
+<ul>
+<%
+    link_keys.each do |link_key|
+        linkObj = @links[link_key.to_sym]
+        %>
+        <li><%= link_to linkObj.text, linkObj.url  %> </li>
+        <%
+    end
+%>    
+</ul>
+

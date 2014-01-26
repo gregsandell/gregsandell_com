@@ -3,7 +3,7 @@
 <% content_for(:sidebar) do %>
     This is the sidebar for the blog page.
     <br>
-    <%= render 'links', :arg => "my links argument" %>
+    <%= render 'links', :link_keys => ['mswordResume', 'pdfFormat', 'linkedIn'] %>
     <br>
     <%= render 'blog', :arg => "my blog argument" %>
 <% end %>
