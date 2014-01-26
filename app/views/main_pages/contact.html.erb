@@ -11,7 +11,7 @@
 <% content_for(:sidebar) do %>
     This is the sidebar for the contact page.
     <br>
-    <%= render 'links', :link_keys => ['blog', 'resume', 'sharc', 'publications'] %>
+    <%= render 'links', :link_keys => %w[blog resume sharc publications] %>
     <br>
     <%= render 'blog', :arg => "my blog argument" %>
     <br>

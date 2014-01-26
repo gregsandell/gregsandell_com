@@ -1,9 +1,92 @@
 <h1>MainPages#resume</h1>
 <p>Find me in app/views/main_pages/resume.html.erb</p>
+<table id="resTbl" border="0" width="500" cellspacing="0" callpadding="0">
+  <tr>
+    <td colspan="2">
+      <table id="resHeaderTbl" border="0" width="560" cellspacing="0" callpadding="0">
+        <tr>
+          <td class="certificationImg">
+              <%= image_tag(@resume.imageJava, style:"valign: top", alt:"Java Certification")%> 
+          </td>
+          <td id="nameAddress"> 
+            <%= @resume.name %>
+            <ul id="address"> 
+              <% @resume.address.each do |addressLine| %>
+                  <li><%= addressLine %></li> 
+              <% end %>
+            </ul>
+          </td>
+          <td class="certificationImg">
+              <%= image_tag(@resume.imageSCWCD, style:"valign: top", alt:"SCWCD Certification")%> 
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="sectHead" colspan="2">
+      Summary of Qualifications
+    </td>
+  </tr>
+  <tr>  
+    <td colspan="2"> 
+      <% @resume.qual.each do |qual| %>
+            <p class="summary"><%= qual %></p> 
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="sectHead" colspan="2">
+      Objectives
+    </td>
+  </tr>
+  <tr>  
+    <td colspan="2">
+      <% @resume.skillset.each do |skill| %>
+        <p class="summary"><%= skill %></li>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="sectHead" colspan="2">
+      Employment History
+    </td>
+  </tr>
+  <% @resume.positions.each do |position| %>
+    <tr>
+      <td style="border: 1px solid black"> 
+        <table border="0">
+          <tr>
+            <td width="372">
+              <span class="company"><%= position.company %> </span>
+              <span class="city">(<%= position.location %>)</span>
+              <br/>
+              <span class="basisLabel">Basis: </span>
+              <span class="basis"><%= position.basis %></span>
+            </td>
+            <td class="timeTitle" width="128" >
+              <%= position.dates %>
+              <br/><%= position.title %>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ul> 
+          <% position.listTextArray.each do |line| %>
+            <li><%= line %></li> 
+          <% end %>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+</table>
 <% content_for(:sidebar) do %>
     This is the sidebar for the blog page.
     <br>
-    <%= render 'links', :link_keys => ['mswordResume', 'pdfFormat', 'linkedIn'] %>
+    <%= render 'links', :link_keys => %w[mswordResume pdfFormat linkedIn] %>
     <br>
     <%= render 'blog', :arg => "my blog argument" %>
 <% end %>
