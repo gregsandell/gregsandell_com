@@ -199,7 +199,8 @@ h1.logoH1 {
 
 #page {
 	width: $basicWidth; 
-    height: 637px;
+    /* height: 637px; */
+    height: auto;
 	margin: 0 auto;
 	background: $colorMainBodyBg url(funride/img04.gif) repeat-y; 
 }
