@@ -1,2 +1,18 @@
-This is the blog partial with argument "<%= arg %>".
+<ul>
+	<li id="news">
+		<h2>Most Recent Blogs</h2>
+		<ul> 
+            <% for i in 0..3 do %>
+                <% blog = @blogs[i] %>
+                <li>
+                    <h3><%= blog.date %></h3>
+                    <p>
+                        <%= link_to blog.text, blog.url %>&nbsp;
+                        <%= image_tag("wikipediaExternalPageGold.png", border:"0", alt:"External Page") %>
+                    </p>
+                </li> 
+            <% end %>
+		</ul>
+	</li>
+</ul>
 

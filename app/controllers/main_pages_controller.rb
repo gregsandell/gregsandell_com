@@ -89,44 +89,68 @@ class MainPagesController < ApplicationController
             pdfFormat: Link.new("PDF Format", "/greg-sandell-resume.pdf", true),
             linkedIn: Link.new("Linked In Profile", "https://www.linkedin.com/e/fpf/3094039/fprf/", true)
         }
+
+        @blogs = [
+            Blog.new("Solving Character Set Problems", 
+                "http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html",
+                 "2009.05.15"),
+            Blog.new("Hacking a Linksys NSLU2",
+                "http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html",
+                 "2009.03.27"),
+            Blog.new("Maven 2 Tutorial",
+                "http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html", "2007.07.13"),
+		    Blog.new("S-Corps for Software Contracters", 
+				"http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html",
+			    "2006.10.22")
+        ]
     end
   
-  end
-    class Link
-        attr_accessor :text, :url, :remote
-        def initialize(text, url, remote=false) 
-            @text = text;
-            @url = url;
-            @remote = remote
-        end
+end
+class Link
+    attr_accessor :text, :url, :remote
+    def initialize(text, url, remote=false) 
+        @text = text;
+        @url = url;
+        @remote = remote
     end
-    class Position
-        attr_accessor :company, :location, :dates, :basis, :title, :listTextArray
-        def initialize(company, location, dates, basis, title)
-            @company = company
-            @location = location
-            @dates = dates
-            @basis = basis
-            @title = title
-            @listTextArray = []
-        end
+end
+class Position
+    attr_accessor :company, :location, :dates, :basis, :title, :listTextArray
+    def initialize(company, location, dates, basis, title)
+        @company = company
+        @location = location
+        @dates = dates
+        @basis = basis
+        @title = title
+        @listTextArray = []
     end
-    class Resume
-        attr_accessor :positions, :skillset, :qual, :training, :education, :name, :address, :imageJava, :imageSCWCD
-        def initialize
-            @address = []
-            @positions = []
-            @training = []
-            @education = []
-        end
+end
+class Resume
+    attr_accessor :positions, :skillset, :qual, :training, :education, :name, :address, :imageJava, :imageSCWCD
+    def initialize
+        @address = []
+        @positions = []
+        @training = []
+        @education = []
+        @blogs = []
     end
-    class Training
-        attr_accessor :course, :dates
-        def initialize(course, dates) 
-            @course = course
-            @dates = dates
-        end
+end
+class Training
+    attr_accessor :course, :dates
+    def initialize(course, dates) 
+        @course = course
+        @dates = dates
     end
+end
+
+class Blog
+    attr_accessor :text, :url, :date
+    def initialize(text, url, date)
+        @text = text
+        @url = url
+        @date = date
+    end
+end
         
               
 
