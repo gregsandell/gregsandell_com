@@ -14,6 +14,10 @@ class MainPagesController < ApplicationController
         @resume.imageSCWCD = "greg-sandell-resume_files/image004.jpg"
         @resume.skillset = ["Work in a software delivery role to provide robust mobile web applications emphasizing development of SaaS web services and RIA interfaces. Seeking positions in downtown Chicago or nearby with minimal travel."]
         @resume.qual = ["I am a 14-year senior developer of web applications with particular depth in Mobile Web, Javascript, MVC Frameworks, jQuery, Ajax/JSON, web services, Unix, Agile and Open Source. I have worked for Reuters, Chicago Tribune, UBS, Amex, Lockheed-Martin in vertical markets including media, travel, finance, defense, healthcare, eCommerce and education.  I hold a PhD degree and am highly effective at communications, writing and presentations."]
+
+#
+#    SEARS
+#
         position = Position.new(
             "Sears Holding Corporation", 
             "Chicago, IL", "Nov 2013 - present",
@@ -103,6 +107,66 @@ class MainPagesController < ApplicationController
 				"http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html",
 			    "2006.10.22")
         ]
+
+        @slides = Slideshow.new(150, 90, "logos", "Supported Technologies",2000)
+		@slides.add("apache2.jpg")
+		@slides.add("apacheAnt2.jpg");
+		@slides.add("autonomy.jpg");
+		@slides.add("coffeescript.jpg");
+		@slides.add("cognos.jpg");
+		@slides.add("confluence.jpg");
+		@slides.add("eclipse2.jpg");
+		@slides.add("gimp2.jpg");
+		@slides.add("glassfish.jpg");
+		@slides.add("iText.gif");
+		@slides.add("intellijIdea.jpg");
+		@slides.add("jakartaCommons.jpg");
+		@slides.add("java2.jpg");
+		@slides.add("javascript.jpg");
+		@slides.add("jdom.jpg");
+		@slides.add("jenkins.jpg");
+		@slides.add("jfreechart.png");
+		@slides.add("jira.png");
+		@slides.add("jquery2.jpg");
+		@slides.add("jqueryMobile.jpg");
+		@slides.add("jshint.jpg");
+		@slides.add("json.jpg");
+		@slides.add("jsp3.jpg");
+		@slides.add("maven2.jpg");
+		@slides.add("mercurial.jpg");
+		@slides.add("netbeans.jpg");
+		@slides.add("oracle2.jpg");
+		@slides.add("parse.jpg");
+		@slides.add("php.jpg");
+		@slides.add("pivotalTracker.jpg");
+		@slides.add("poi.jpg");
+		@slides.add("mysql2.jpg");
+		@slides.add("rails.jpeg");
+		@slides.add("sass.jpg");
+		@slides.add("subversion.jpg");
+		@slides.add("tomcat2.jpg");
+		@slides.add("triggerIO.jpg");
+		@slides.add("vim.jpg");
+		@slides.add("websphere.gif");
+		@slides.add("xmlTypewriter.jpg");
+		@slides.add("filezilla.jpg");
+		@slides.add("ruby.png");
+		@slides.add("chromeDevTools.jpg");
+		@slides.add("angularJS.jpg");
+		@slides.add("highcharts.jpg");
+		@slides.add("mamp.jpg");
+		@slides.add("git.jpg");
+		@slides.add("github.jpg");
+		@slides.add("homebrew.jpg");
+		@slides.add("twitterBootstrap.png");
+		@slides.add("jasmine.jpg");
+		@slides.add("grunt.jpg");
+		@slides.add("nodeJS.jpg");
+		@slides.add("sqlServer2.jpg");
+		@slides.add("css3.jpg");
+		@slides.add("html5.jpg");
+		@slides.add("xslt.jpg");
+		@slides.add("testflight.jpg");
     end
   
 end
@@ -152,5 +216,22 @@ class Blog
     end
 end
         
+class Slideshow
+    attr_accessor :width, :height, :imgsSubdir, :title, :dur, :slides
+    def initialize(width, height, imgsSubdir, title, dur)
+        @width = width
+        @height = height
+        @imgsSubdir = imgsSubdir
+        @title = title
+        @dur = dur
+        @slides = []
+    end
+    def add(img)
+        @slides.push(img)
+    end
+end
+
+
+    
               
 

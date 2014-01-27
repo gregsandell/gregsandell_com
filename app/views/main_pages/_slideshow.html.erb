@@ -1,1 +1,47 @@
-This is the slideshow partial with argument "<%= arg %>".
+<h2><%= @slides.title %></h2>
+<br>
+<div id="rotatingLogosDiv" style="text-align: center">
+    <%= image_tag("image/logos/spacer.gif", alt:"", name:"slide", border:"0", style:"filter:blendTrans(duration=2)", width:190, height:150) %>
+</div>
+<script>
+    var slidespeed = <%= @slides.dur %>
+    var numImages = 0;
+    var slidelinks = new Array("#","#","#");
+    var newwindow = 1; // open links in new window? 1=yes, 0=no
+    var imageholder = new Array();
+    var ie = document.all;
+    var whichlink = 0;
+    var whichimage = 0;
+    var imageOrder = new Array();
+    function loadImages() {
+        numImages = 0;  
+        <% count = 0; %>
+        <% @slides.slides.each do |slide| %>
+            imageholder[<%= count %>] = new Image();
+            imageholder[<%= count %>].src = '<%= image_path("#{@slides.imgsSubdir}/#{slide}")%>';
+            <% count += 1;   %>
+        <% end %>
+        numImages = <%= count %>;
+        imageOrder = randomArray(numImages);
+
+    }
+    function slideit() {
+        if (!document.images) {
+            return;
+        }
+        if (ie) {
+            document.images.slide.filters[0].apply();
+        }
+        document.images.slide.src = imageholder[imageOrder[whichimage]].src;
+        if (ie) {
+            document.images.slide.filters[0].play();
+        }
+        whichlink = whichimage;
+
+        whichimage = (whichimage + 1) % numImages;
+        setTimeout(slideit, slidespeed + blenddelay);
+    }
+    var blenddelay = ie ? document.images.slide.filters[0].duration * 1000 : 0;
+    loadImages();
+    slideit();
+</script>  
