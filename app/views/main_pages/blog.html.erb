@@ -1,8 +1,42 @@
-<h1>MainPages#blog</h1>
-<p>Find me in app/views/main_pages/blog.html.erb</p>
+<div>
+    <table>
+        <tr>
+            <td>
+                <a href='http://gregsandell.blogspot.com'>
+                    <%= image_tag('blogspotIcon.jpg', border:'0') %>
+                </a>
+            </td>
+            <td style='padding-left: 10px; ' valign='top'>
+                <p>My blog 'Elevator Music': Postings about technology, software development, music, Chicago, politics, and interesting stuff on the web.</p>
+				<p><a href='http://gregsandell.blogspot.com'>Go to blog</a> (or view in <a href='http://gregsandell.blogspot.com' target='_BLANK'>separate window</a>).</p>
+		    </td>
+	    </tr>
+        <tr>
+		    <td colspan='2' style='font-weight: bold'>Technology-related posts</td>
+	    </tr>
+		<tr>
+			<td colspan='2'>
+				<ul>
+                    <li>
+                        <a href="http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html">Solving Character Set Problems: ASCII, ISO-8859, WinLatin1 and UTF-8</a> 
+                    </li>
+                    <li>
+                        <a href="http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html">Hacking a Linksys NSLU2</a> 
+                    </li>
+					<li>Maven2 Tutorial: <a href='http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html'>Part 1</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html'>S-corps for Software Contracters</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2007/10/sharc-timbre-dataset-v-20-xml-format.html'>The SHARC Timbre Dataset v. 2.0: XML Format</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2007/08/idea-with-tomcat-6-integration.html'>IDEA with Tomcat 6 Integration</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2007/07/vista-guinea-pig.html'>Vista Guinea Pig</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2007/11/zune-surprisingly-enjoyable.html'>The Zune, Surprisingly Enjoyable</a></li>
+					<li><a href='http://gregsandell.blogspot.com/2007/08/syncing-handheld-with-vista.html'>Syncing a Handheld with Vista</a></li>
+			    </ul>
+		    </td>
+		</tr>
+    </table>
+</div>
+
 <% content_for(:sidebar) do %>
-    This is the sidebar for the blog page.
-    <br>
     <%= render 'links', :link_keys => %w[blog] %>
     <br>
     <%= render 'blog' %>

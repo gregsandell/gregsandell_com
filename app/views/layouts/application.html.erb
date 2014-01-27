@@ -15,13 +15,14 @@
 			<h2>Javascript Web App Developer</h2>
 		</div>
 		<div id="menu">
+            <% current_uri = request.env['PATH_INFO'] %>
 			<ul>
-				<li class="active"><%= link_to "Home", root_path %></li>
-				<li class=""><%= link_to "Resume", resume_path %></li>
-				<li class=""><%= link_to "Code", code_path %></li>
-				<li class=""><%= link_to "Talks", talks_path %></li>
-				<li class=""><%= link_to "Blog", blog_path %></li>
-				<li class=""><%= link_to "Contact", contact_path %></li>
+				<li class="<%= current_uri == '/' ? 'active' : ''%>"><%= link_to "Home", root_path %></li>
+                <li class="<%= current_uri == '/resume' ? 'active' : ''%>"><%= link_to "Resume", resume_path %></li>
+				<li class="<%= current_uri == '/code' ? 'active' : ''%>"><%= link_to "Code", code_path %></li>
+				<li class="<%= current_uri == '/talks' ? 'active' : ''%>"><%= link_to "Talks", talks_path %></li>
+				<li class="<%= current_uri == '/blog' ? 'active' : ''%>"><%= link_to "Blog", blog_path %></li>
+				<li class="<%= current_uri == '/contact' ? 'active' : ''%>"><%= link_to "Contact", contact_path %></li>
 			</ul>
 		</div>
     </div>
