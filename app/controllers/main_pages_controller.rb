@@ -84,6 +84,22 @@ class MainPagesController < ApplicationController
         position.listTextArray.push("Created JUnit tests for Test Driven Development.");
         position.listTextArray.push("Collaborated using a Scrum based agile methodology, using tools Bamboo (continuous integration), Crucible (code reviews), Fisheye and Greenhopper.");
         @resume.positions.push(position)
+#
+#       TRIBUNE
+#
+        position = Position.new(
+            "Tribune Interactive", "Chicago, IL", "Feb 08 - Oct 08",
+					"W2/Direct Placement", "Sr. Internet Software Developer"
+        )
+		position.listTextArray.push("Supported central web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye");
+		position.listTextArray.push("Developed code in Java 1.5  on J2EE platform including Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet) and TopLink 9.0. Development tools included Intellij 6.0, svn, Borland Starteam, Toad, SQuirrel SQL Client, Cruise Control, Enterprise Architect 7");
+		position.listTextArray.push("Created scheduled jobs for sweeping expired database content");
+		position.listTextArray.push("Worked with SEO Manager to optimize sites for favorable Google positioning, created daily, weekly and 30-day sitemaps");
+		position.listTextArray.push("Supported web services for user registration and Mobile feeds");
+		position.listTextArray.push("Created JMeter test plans and reporting tools to compare performance before and after software changes");
+		position.listTextArray.push("Wrote Product Development specs, deployment and QA test plans");
+		position.listTextArray.push("Actively deployed apps in server farm environments with separate environments for dev, qa, design, test and prod");
+        @resume.positions.push(position)
     end
   
     def code
