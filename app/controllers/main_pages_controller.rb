@@ -144,6 +144,7 @@ class MainPagesController < ApplicationController
         @slides = Slideshow.new(150, 90, "logos", "Supported Technologies",2000)
 		@slides.add("apache2.jpg")
 		@slides.add("apacheAnt2.jpg");
+		@slides.add("apacheCommons.png");
 		@slides.add("autonomy.jpg");
 		@slides.add("bamboo.jpg");
 		@slides.add("coffeescript.jpg");
@@ -151,15 +152,15 @@ class MainPagesController < ApplicationController
 		@slides.add("crucible.jpg");
 		@slides.add("eclipse2.jpg");
 		@slides.add("gimp2.jpg");
+		@slides.add("googleApps.jpg");
+		@slides.add("googleDrive.jpg");
 		@slides.add("glassfish.jpg");
-		@slides.add("iText.gif");
 		@slides.add("intellijIdea.jpg");
-		@slides.add("jakartaCommons.jpg");
+		@slides.add("iText.jpg");
 		@slides.add("java2.jpg");
 		@slides.add("javascript.jpg");
-		@slides.add("jdom.jpg");
 		@slides.add("jenkins.jpg");
-		@slides.add("jfreechart.png");
+		@slides.add("jfreechart.jpg");
 		@slides.add("jira.png");
 		@slides.add("jmeter.jpg");
 		@slides.add("jquery2.jpg");
