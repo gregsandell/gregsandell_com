@@ -145,9 +145,10 @@ class MainPagesController < ApplicationController
 		@slides.add("apache2.jpg")
 		@slides.add("apacheAnt2.jpg");
 		@slides.add("autonomy.jpg");
+		@slides.add("bamboo.jpg");
 		@slides.add("coffeescript.jpg");
 		@slides.add("cognos.jpg");
-		@slides.add("confluence.jpg");
+		@slides.add("crucible.jpg");
 		@slides.add("eclipse2.jpg");
 		@slides.add("gimp2.jpg");
 		@slides.add("glassfish.jpg");
@@ -160,11 +161,13 @@ class MainPagesController < ApplicationController
 		@slides.add("jenkins.jpg");
 		@slides.add("jfreechart.png");
 		@slides.add("jira.png");
+		@slides.add("jmeter.jpg");
 		@slides.add("jquery2.jpg");
 		@slides.add("jqueryMobile.jpg");
 		@slides.add("jshint.jpg");
 		@slides.add("json.jpg");
 		@slides.add("jsp3.jpg");
+		@slides.add("linux.jpg");
 		@slides.add("maven2.jpg");
 		@slides.add("mercurial.jpg");
 		@slides.add("netbeans.jpg");
@@ -177,6 +180,7 @@ class MainPagesController < ApplicationController
 		@slides.add("rails.jpeg");
 		@slides.add("sass.jpg");
 		@slides.add("subversion.jpg");
+		@slides.add("toad.jpg");
 		@slides.add("tomcat2.jpg");
 		@slides.add("triggerIO.jpg");
 		@slides.add("vim.jpg");
