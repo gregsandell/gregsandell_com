@@ -13,6 +13,7 @@
     var whichlink = 0;
     var whichimage = 0;
     var imageOrder = new Array();
+    var timer;
     function loadImages() {
         numImages = 0;  
         <% count = 0; %>
@@ -39,9 +40,10 @@
         whichlink = whichimage;
 
         whichimage = (whichimage + 1) % numImages;
-        setTimeout(slideit, slidespeed + blenddelay);
+        timer = setTimeout(slideit, slidespeed + blenddelay);
     }
     var blenddelay = ie ? document.images.slide.filters[0].duration * 1000 : 0;
     loadImages();
+    clearTimeout(timer);
     slideit();
 </script>  
