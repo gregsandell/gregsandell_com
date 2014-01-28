@@ -31,7 +31,7 @@ class MainPagesController < ApplicationController
 #       PATHFINDER SOFTWARE
 #
         position = Position.new(
-            "Pathfinder Software", "Chicago, IL", "Aug 2012 - Aug 2013",
+            "Pathfinder Software", "Chicago, IL", "Aug '12 - Aug '13",
 					"Direct Hire", "Sr. Software Developer"
         )
         position.listTextArray.push("30-person consultancy specializing in mobie medical solutions");
@@ -46,7 +46,7 @@ class MainPagesController < ApplicationController
 #       TRUVEN
 #
         position = Position.new(
-            "Truven Health Analytics", "Chicago, IL", "Apr 2010 - Aug 2012",
+            "Truven Health Analytics", "Chicago, IL", "Apr '10 - Aug '12",
 					"Converted to FT/Perm after contract", "Sr. Software Developer"
         )
         position.listTextArray.push("Formerly Thomson-Reuters Healthcare.  Sold in June 2012 for $1.25 bil.");
@@ -66,6 +66,23 @@ class MainPagesController < ApplicationController
         position.listTextArray.push("Develop portal applications for IBM Websphere Portal Server and deploy with WPS Admin");
         position.listTextArray.push("Helped transition team from waterfall to agile approach by introducing Maven2, Artifactory Repository Server, Hudson Continuous Integration, Mercurial source control and TDD practices.");
         position.listTextArray.push("Other technologies not mentioned above: Eclipse, CVS, Rally, JSP, JSTL, Ant, Firebug, Spring MVC/IOC/JDBC, GWT, Struts 1.2, Tiles");
+        @resume.positions.push(position)
+#
+#       ICROSSING
+#
+        position = Position.new(
+            "iCrossing", "Chicago, IL", "Oct 08 - Mar 2010",
+					"W2/Direct Placement", "Sr. Software Engineer"
+        )
+        position.listTextArray.push("Developed proprietary online application 'Merchantize' used by iCrossing clients.  The application provides a unified interface for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber).");
+        position.listTextArray.push("Utilized Struts2/Webwork to build Business Intelligence tools for reporting, analysis and dashboards against an in-house Data Warehouse on Mysql 5.1 containing click and purchase information from clients' E-commerce sites.");
+        position.listTextArray.push("Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes.");
+        position.listTextArray.push("Programmed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.  Large product datasets would be sent from clients by ftp, be transformed to a unified data format, and sent out to Google, Yahoo, MSN, etc., through each Search Engine's proprietary API.");
+        position.listTextArray.push("Collaborated with account managers to address the reporting needs for clients Sears, The Gap, Hilton, Lands End, LEGO, Williams Sonoma.  Custom reports were created on the Merchantize UI or in Excel using Apache POI.");
+        position.listTextArray.push("Provided expertise for resolving UTF-8, Latin1 and WinLatin1 character conversion problems in feeds.");
+        position.listTextArray.push("On regular rotation for bi-weekly release of product across 10 different Linux servers.");
+        position.listTextArray.push("Created JUnit tests for Test Driven Development.");
+        position.listTextArray.push("Collaborated using a Scrum based agile methodology, using tools Bamboo (continuous integration), Crucible (code reviews), Fisheye and Greenhopper.");
         @resume.positions.push(position)
     end
   
